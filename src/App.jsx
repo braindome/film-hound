@@ -4,7 +4,7 @@ import './App.css'
 const API_KEY = "973b4444";
 const BASE_URL = "http://www.omdbapi.com/?apikey=";
 const URL = `${BASE_URL}${API_KEY}`;
-const TITLE_SEARCH_PARAM = "&t=";
+const TITLE_SEARCH_PARAM = "&s="; // https://www.omdbapi.com/ API parameters
 
 console.log(`API URL: ${URL}`);
 
