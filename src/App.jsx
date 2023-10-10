@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import SearchedFilms from './components/SearchedFilms';
+
 
 const API_KEY = "973b4444";
 const BASE_URL = "http://www.omdbapi.com/?apikey=";
@@ -10,6 +12,7 @@ console.log(`API URL: ${URL}`);
 
 function App() {
   const [title, setTitle] = useState("");
+  const [filmData, setFilmData] = useState(null);
 
   const handleInput = (input) => {
     setTitle(input.target.value);
@@ -22,6 +25,7 @@ function App() {
     const filmData = await response.json();
   
     console.log(filmData);
+    setFilmData(filmData);
   }
   
 
@@ -33,6 +37,7 @@ function App() {
       <input type="text" value={title} onChange={handleInput} />
       <button onClick={getFilm}>Search</button>
       <button>Browse</button>
+      {filmData && <SearchedFilms filmData={filmData} />}
     </div>
   )
 }
