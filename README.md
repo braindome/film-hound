@@ -5,6 +5,7 @@
 
 ### TOOLS USED:
 [![My Skills](https://skillicons.dev/icons?i=javascript)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev)
 
 ### PARTICIPANTS:
 <a href="https://github.com/braindome/film-hound/graphs/contributors">
