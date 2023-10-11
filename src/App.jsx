@@ -5,6 +5,8 @@ import Navbar from "./components/navbar"
 import Home from "./styles/home"
 import SearchedFilms from "./components/SearchedFilms"
 import Checkout from "./components/checkout"
+import {BrowserRouter as Router, Route, Routes}from "react-router-dom"
+
 
 const API_KEY = "973b4444";
 const BASE_URL = "http://www.omdbapi.com/?apikey=";
