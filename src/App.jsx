@@ -51,7 +51,7 @@ export default App;
 
 /*---------------------------/*
 // Tänkte att detta skulle vara det ända på denna fil så själva grunden
- hur varje sida ska se ut finns . 
+ hur varje sida ska se ut finns . ..
 
 <div className="app">
    <Router>
