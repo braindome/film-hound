@@ -23,9 +23,6 @@ return (
  <div className="hiddenLinks">
 
 
- <Link to= "/home"><img src= {HomeIcon}/></Link>
-<Link to= "/SearchedFilms"><img src= {SearchIcon}/></Link>
-<Link to= "/checkout"><img src= {ShoppingIcon}/></Link>
 
 
 
