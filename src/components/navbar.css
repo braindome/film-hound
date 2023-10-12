@@ -4,7 +4,7 @@
 
     width: 100%;
     height: 100px;
-    background-color: rgba(6, 6, 6, 0.864);
+    background-color: rgba(6, 6, 6, 0.94);
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
@@ -15,6 +15,12 @@
 
 
 
+}
+
+.navbar  .rightSide:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 0.4s ease-out;
 }
 
 .navbar .leftSide {
@@ -29,12 +35,55 @@
    
    }
    
-   
-   
-   .navbar .leftSide img {
-   
+
+
+.navbar .leftSide img {
+
     width: 130px;
-    color: rgb(10, 10, 9);
+    color: rgb(19, 19, 18);
     
    
    }
+   
+   
+   
+   
+   .navbar .rightSide {
+   
+       flex: 50%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+   
+   
+   
+   
+   
+   }
+   
+   
+   
+   
+   
+   .navbar a {
+   
+    color: rgb(19, 19, 19);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: lighter;
+    margin: 20px;
+   
+   
+   }
+   
+   .navbar .rightSide button {
+   
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+   
+   
+   }
+   
+   
