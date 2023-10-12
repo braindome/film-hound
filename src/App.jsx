@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import './App.css'
-import SearchedFilms from './components/SearchedFilms';
 import Navbar from "./components/navbar"
-import Home from "./styles/home"
+import Home from "./components/home"
 import SearchedFilms from "./components/SearchedFilms"
 import Checkout from "./components/checkout"
+import "./App.css"
 import {BrowserRouter as Router, Route, Routes}from "react-router-dom"
 
 
@@ -19,7 +17,7 @@ return (
 <Navbar />
 
 <Routes>
-<Route path="/home" exact element={<Home/>}/>
+<Route path ="/home" exact element={<Home/>}/>
 <Route path="/" exact element={<Home/>}/>
 
 <Route path="/SearchedFilms" exact element={<SearchedFilms/>}/>
@@ -35,3 +33,4 @@ return (
 </div>
 )
 }
+
