@@ -5,3 +5,12 @@
     position: fixed;
 
 }
+.input {
+padding-top: 0.2rem;
+}
+.btn-search {
+    padding-top: 0.5rem;
+    margin-top: -2rem;
+    
+
+}
