@@ -1,17 +1,14 @@
 .navbar {
 
-
-
     width: 300%;
     height: 100px;
     background-color: rgba(22,22,22);
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
-    font-size: large;
     border-bottom: rgba(0, 0, 0, 0.098) solid 1px;
-    margin-top: -55%;
-
+    margin-top: -60%;
+    margin-left: -137.5px;
 
 
 }
@@ -27,20 +24,17 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: 150px;
-   
-   
-   
+    padding-left: 140px;
+
    
    }
    
 
 
 .navbar .leftSide img {
-
-    width: 140px;
+    padding: 1.2rem;
+    width: 120px;
     color: rgb(19, 19, 18);
-    
    
    }
    
@@ -53,10 +47,8 @@
        height: 100%;
        display: flex;
        align-items: center;
-   
-   
-   
-   
+       padding-right: 10px;
+       
    
    }
    
@@ -67,10 +59,11 @@
    .navbar a {
    
     color: rgb(9, 8, 8);
-    padding: 10px;
+    padding:10px;
     text-decoration: none;
     font-weight: lighter;
-    margin: 40px;
+    margin: 35px;
+   
    
    
    }
@@ -81,6 +74,7 @@
     border: none;
     color: rgb(82, 34, 240);
     cursor: pointer;
+    padding-right: 5rem;
    
    
    }

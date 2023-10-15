@@ -1,29 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-.home {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins'
-}
 body {
-    background: rgb(22, 22, 22)
+  background-color: rgb(22, 22, 22); 
+  margin: 0; 
+  font-family: 'Poppins';
+  overflow-x: hidden;
+
 }
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 10%;
-    background: rgb(56, 139, 255); 
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    z-index: 100;
+  padding: 420px;
+  width: 100%;
 }
 
-.img {
+.background-section {
+  background-image: url(/src/assets/homeBackground.jpeg);
+  opacity: 100%;
+  min-width: 1437px;
+  background-size: cover;
+  min-height: 400px;
+  text-align: center;
+  padding-top: 100px; 
+}
 
+.background-content {
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.blue {
+  color: #007bff;
+}
+
+.background-content button {
+  background: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-browse:hover{
+  background-color: #c0c0c0;
+
+}
+
+.boxes-section {
+  background: rgb(22, 22, 22);
   display: flex;
-
+  justify-content: space-around;
+  padding: 35px;
+  height: 400px;
+  text-align: center;
+  color: white;
+  font-size: 23px;
 }
+
+.box {
+  width: 23%;
+  padding: 20px;
+  margin: 30px;
+  background: rgb(33, 33, 33);
+  border-radius: 15px;
+}
+
+.backgroundtwo-section {
+  background-image: url(/src/assets/movies.jpeg);
+  opacity: 100%;
+  min-width: 1420px;
+  background-size: cover;
+  min-height: 400px;
+  text-align: center;
+  padding-top: 100px;
+}
+.background-content {
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.backgroundtwo-content {
+  background: rgba(0, 0, 0, 0.6); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+
