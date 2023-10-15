@@ -8,7 +8,7 @@ import React, { useState } from 'react'
 import './navbar.css'
 
 
-export default function navbar (){
+export default function Navbar (){
 
 const [openLinks, setOpenLinks] = useState(false)
 
@@ -24,8 +24,6 @@ return (
 
 
 
-
-
  </div>
 
 
@@ -37,19 +35,8 @@ return (
 <Link to= "/SearchedFilms"><img src= {SearchIcon}/></Link>
 <Link to= "/checkout"><img src= {ShoppingIcon}/></Link>
 
-
 </div>
-
-
-
-
 </div>
-
-
-
 
 )
-
-
-    
 }

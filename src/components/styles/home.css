@@ -1,40 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-.home {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins'
-}
-body {  
-  background-image: url(/src/assets/homeBackground.jpeg);
-  padding: 20em;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+body {
+  background-color: rgb(22, 22, 22); 
+  margin: 0; 
+  font-family: 'Poppins';
+  overflow-x: hidden;
 
 }
-.bg-image {
 
-}
 .header {
-  padding-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  padding: 420px;
+  width: 100%;
+}
+
+.background-section {
+  background-image: url(/src/assets/homeBackground.jpeg);
+  opacity: 100%;
+  min-width: 1437px;
+  background-size: cover;
+  min-height: 400px;
+  text-align: center;
+  padding-top: 100px; 
+}
+
+.background-content {
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.blue {
+  color: #007bff;
+}
+
+.background-content button {
+  background: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-browse:hover{
+  background-color: #c0c0c0;
 
 }
-.title {
-  text-decoration: none;
-  font-weight: 700;
-  color: white;
+
+.boxes-section {
+  background: rgb(22, 22, 22);
+  display: flex;
+  justify-content: space-around;
+  padding: 35px;
+  height: 400px;
   text-align: center;
-}
-.color {
-  color: #00A1FC;
-}
-.browse-button {
   color: white;
-  background-color: #00A1FC;
-  
+  font-size: 23px;
 }
+
+.box {
+  width: 23%;
+  padding: 20px;
+  margin: 30px;
+  background: rgb(33, 33, 33);
+  border-radius: 15px;
+}
+
+.backgroundtwo-section {
+  background-image: url(/src/assets/movies.jpeg);
+  opacity: 100%;
+  min-width: 1420px;
+  background-size: cover;
+  min-height: 400px;
+  text-align: center;
+  padding-top: 100px;
+}
+.background-content {
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.backgroundtwo-content {
+  background: rgba(0, 0, 0, 0.6); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
 
