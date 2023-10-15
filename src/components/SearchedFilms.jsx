@@ -3,6 +3,7 @@ import './styles/SearchedFilms.css';
 
 
 
+
 const API_KEY = '973b4444';
 const BASE_URL = 'http://www.omdbapi.com/?apikey=';
 const TITLE_SEARCH_PARAM = '&s=';
@@ -26,10 +27,10 @@ const SearchedFilms = () => {
   };
 
   return (
-    <div>
-      <h1>Film Hound</h1>
-      <input type="text" value={title} onChange={handleInput} />
-      <button onClick={getFilm}>Search</button>
+    <div className='search-content'>
+      <h1>FILM<span className='blue'>HOUND</span></h1>
+      <input className='input' type="text" value={title} onChange={handleInput} />
+      <button className='btn-search' onClick={getFilm}>Search</button>
   
       {filmData && (
         <div>
