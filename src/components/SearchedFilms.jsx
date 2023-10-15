@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './styles/SearchedFilms.css';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../features/action';
 
 
 
@@ -8,6 +10,13 @@ const BASE_URL = 'http://www.omdbapi.com/?apikey=';
 const TITLE_SEARCH_PARAM = '&s=';
 
 const SearchedFilms = () => {
+
+  const dispatch = useDispatch();
+
+  const handleBuy = (film) => {
+    dispatch(addToCart(film));
+  };
+
   const [title, setTitle] = useState('');
   const [filmData, setFilmData] = useState(null);
 
@@ -47,10 +56,13 @@ const SearchedFilms = () => {
                     <p>Type: {film.Type}</p>
                     <p>Year: {film.Year}</p>
                     <p>IMDB ID: {film.imdbID}</p>
-                    <p>---------------------------------------------------------------------</p>
+                    <a href={`http://www.imdb.com/title/${film.imdbID}`}>IMDB Page</a>
                   </div>
+                  <button onClick={() => handleBuy(film)} >Buy</button>
                 </div>
+                <p>---------------------------------------------------------------------</p>
               </li>
+              
             ))}
           </ul>
         </div>
