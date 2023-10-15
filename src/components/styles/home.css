@@ -3,27 +3,38 @@
 .home {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Poppins'
 }
-body {
-    background: rgb(22, 22, 22)
+body {  
+  background-image: url(/src/assets/homeBackground.jpeg);
+  padding: 20em;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+}
+.bg-image {
+
 }
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 10%;
-    background: rgb(56, 139, 255); 
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    z-index: 100;
-}
-
-.img {
-
+  padding-top: 4rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
+.title {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+.color {
+  color: #00A1FC;
+}
+.browse-button {
+  color: white;
+  background-color: #00A1FC;
+  
+}
+
