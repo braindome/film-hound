@@ -2,6 +2,7 @@ import Logo from "/src/assets/Logo.png";
 import HomeIcon from "/src/assets/home_Icon.png";
 import SearchIcon from "/src/assets/icon_search.png";
 import ShoppingIcon from "/src/assets/icon_shopping.png";
+import UserLogin from "./UserLogin";
 
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
@@ -12,6 +13,8 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
+      <UserLogin />
+
       <div className="leftSide" id={openLinks ? "open" : "close"}>
       <h1 className="title">FILM<span className='blue'>HOUND</span></h1>
         <div className="hiddenLinks"></div>
