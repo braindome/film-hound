@@ -50,7 +50,7 @@ const SearchedFilms = () => {
 
       {filmData && (
          <div className='search-content'>
-          <h1>Film Hound</h1>
+          
       <input type="text" value={title} onChange={handleInput} />
       <button onClick={getFilm}>Search</button>
           <h2>Search Results</h2>
