@@ -68,7 +68,7 @@ const SearchedFilms = () => {
                     <p>IMDB ID: {film.imdbID}</p>
                     <a href={`http://www.imdb.com/title/${film.imdbID}`}>IMDB Page</a>
                   </div>
-                  <button onClick={() => handleBuy(film)} >Buy</button>
+                  <button className="buyMovieBtn" onClick={() => handleBuy(film)} >Buy</button>
                 </div>
                 <p>---------------------------------------------------------------------</p>
               </li>
