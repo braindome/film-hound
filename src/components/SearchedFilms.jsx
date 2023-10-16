@@ -20,14 +20,17 @@ const SearchedFilms = () => {
 
   const [title, setTitle] = useState('');
   const [filmData, setFilmData] = useState(null);
+  const [searchClicked, setSearchClicked] = useState(false); 
 
   const handleInput = (input) => {
     setTitle(input.target.value);
+    
   };
 
   const getFilm = async () => {
+    setSearchClicked(true);
     const searchByTitleUrl = `${BASE_URL}${API_KEY}${TITLE_SEARCH_PARAM}${title}`;
-
+  
     const response = await fetch(searchByTitleUrl);
     const filmData = await response.json();
 
@@ -36,13 +39,17 @@ const SearchedFilms = () => {
   };
 
   return (
-    <div className='search-content'>
-      <h1 className='title1'>FILM<span className='blue'>HOUND</span></h1>
-      <input className='input' type="text" value={title} onChange={handleInput} />
-      <button className='btn-search' onClick={getFilm}>Search</button>
-  
+
+{!searchClicked ? (
+  <div className='initial-search'>
+    <h1>FILM<span className='blue'>HOUND</span></h1>
+    <input className='input' type="text" value={title} onChange={handleInput} />
+    <button className='btn-search' onClick={getFilm}>Search</button>
+  </div>
+) : null}
+
       {filmData && (
-        <div>
+         <div className='search-content'>
           <h1>Film Hound</h1>
       <input type="text" value={title} onChange={handleInput} />
       <button onClick={getFilm}>Search</button>

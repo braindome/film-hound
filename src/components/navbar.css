@@ -1,26 +1,31 @@
 .navbar {
 
-    width: 380%;
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+
     height: 100px;
-    background-color: rgba(22,22,22);
+    background-color: rgba(22, 22, 22);
     display: flex;
     flex-direction: row;
     font-family: 'Poppins', sans-serif;
-    border-bottom: rgba(0, 0, 0, 0.098) solid 1px;
-    margin-top: -60%;
-    margin-left: -115px;
 
-}
+    border-bottom: rgba(192, 150, 150, 0.098) solid 1px;
+    z-index: 1000; 
+  }
+
+/*
 .title {
     font-size: 30px;
     margin-left: 20px;
     color: white;
-}
+}*/
 
-.navbar  .rightSide:hover{
-    background-color: rgba(18, 66, 162, 0.83);
-    cursor: pointer;
-    transition: 0.4s ease-out;
+
+.navbar .rightSide:hover {
+  background-color: rgba(18, 66, 162, 0.83);
+  cursor: pointer;
+  transition: 0.4s ease-out;
 }
 
 .navbar .leftSide {

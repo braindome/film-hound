@@ -17,11 +17,12 @@ export default function App() {
 
 
         <Routes>
-          <Route path="/home" exact element={<Home />} />
-          <Route path="/" exact element={<Home />} />
-
-          <Route path="/SearchedFilms" exact element={<SearchedFilms />} />
-          <Route path="/checkout" exact element={<ShoppingCart />} />
+          <Route path="/home"  element={<Home />} />
+          <Route path="/"  element={<Home />} />
+          <Route path="/film-hound"  element={<Home />} />
+         
+          <Route path="/SearchedFilms"  element={<SearchedFilms />} />
+          <Route path="/checkout"  element={<ShoppingCart />} />
 
         </Routes>
       </Router>
