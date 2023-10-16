@@ -1,6 +1,6 @@
 .navbar {
 
-    width: 300%;
+    width: 380%;
     height: 100px;
     background-color: rgba(22,22,22);
     display: flex;
@@ -8,9 +8,13 @@
     font-family: 'Poppins', sans-serif;
     border-bottom: rgba(0, 0, 0, 0.098) solid 1px;
     margin-top: -60%;
-    margin-left: -137.5px;
+    margin-left: -115px;
 
-
+}
+.title {
+    font-size: 30px;
+    margin-left: 20px;
+    color: white;
 }
 
 .navbar  .rightSide:hover{
