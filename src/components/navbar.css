@@ -11,9 +11,10 @@
     margin-left: -115px;
 
 }
-.logo {
+.title {
     font-size: 30px;
     margin-left: 20px;
+    color: white;
 }
 
 .navbar  .rightSide:hover{

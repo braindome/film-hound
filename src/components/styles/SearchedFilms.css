@@ -5,11 +5,18 @@
     position: fixed;
 
 }
+.title1 {
+    color: rgb(255, 244, 244);
+    
+}
 .input {
-padding-top: 0.2rem;
+padding-top: 0.1rem;
 }
 .btn-search {
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
     margin-top: -2rem;
 
+}
+.btn-search:hover {
+background-color: rgb(36, 116, 255);
 }

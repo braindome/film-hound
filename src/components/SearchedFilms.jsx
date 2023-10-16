@@ -37,7 +37,7 @@ const SearchedFilms = () => {
 
   return (
     <div className='search-content'>
-      <h1>FILM<span className='blue'>HOUND</span></h1>
+      <h1 className='title1'>FILM<span className='blue'>HOUND</span></h1>
       <input className='input' type="text" value={title} onChange={handleInput} />
       <button className='btn-search' onClick={getFilm}>Search</button>
   
