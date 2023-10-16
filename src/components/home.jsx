@@ -4,6 +4,8 @@ import './styles/home.css'
 import iconOne from '../assets/iconOne.png'
 import iconTwo from '../assets/iconTwo.png'
 import iconThree from '../assets/iconThree.png'
+import { Link } from "react-router-dom";
+
 
 
 function Header() {
@@ -19,7 +21,9 @@ function BackgroundSection() {
     <div className="background-section">
       <div className="background-content">
         <h1>WELCOME TO <span className="blue">FILMHOUND</span></h1>
-        <button className="btn-browse">BROWSE</button>
+        <Link to="/SearchedFilms">
+          <button className="btn-browse">BROWSE</button>
+        </Link>
       </div>
     </div>
   );
