@@ -1,0 +1,15 @@
+.cart_wrapper {
+    border: solid 2px blue;
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    padding: 20px;
+    min-width: 500px;
+}
+
+.checkout_row {
+    /* border: solid 2px blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
