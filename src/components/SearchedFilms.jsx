@@ -54,7 +54,9 @@ const SearchedFilms = () => {
       <input type="text" value={title} onChange={handleInput} />
       <button onClick={getFilm}>Search</button>
           <h2>Search Results</h2>
+          
           <ul>
+            <div className="movies">
             {filmData.Search.map((film, index) => (
               <li key={index}>
                 <div>
@@ -71,8 +73,11 @@ const SearchedFilms = () => {
                 <p>---------------------------------------------------------------------</p>
               </li>
               
+              
             ))}
+            </div>
           </ul>
+          
         </div>
       )}
     </div>

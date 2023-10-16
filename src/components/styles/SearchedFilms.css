@@ -6,10 +6,23 @@
     align-items: center; 
     padding-top: 7rem;
     padding-bottom: 3rem;
+   
+
   }
 
 .initial-search{
     position: fixed;
+  
+
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    
+
+
+
 }
 /*
 .title1 {
@@ -19,6 +32,8 @@
 */
 .input {
 padding-top: 0.1rem;
+
+
 }
 .btn-search {
     padding-top: 0.3rem;
