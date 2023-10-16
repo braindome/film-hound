@@ -39,7 +39,7 @@ const SearchedFilms = () => {
   };
 
   return (
-
+    <div>
 {!searchClicked ? (
   <div className='initial-search'>
     <h1>FILM<span className='blue'>HOUND</span></h1>
