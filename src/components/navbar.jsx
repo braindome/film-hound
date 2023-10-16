@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="leftSide" id={openLinks ? "open" : "close"}>
-        <img src={Logo} />
+      <h1 className="title">FILM<span className='blue'>HOUND</span></h1>
         <div className="hiddenLinks"></div>
       </div>
       <div className="rightSide">
@@ -30,3 +30,4 @@ export default function Navbar() {
     </div>
   );
 }
+
