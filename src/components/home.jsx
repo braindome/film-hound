@@ -7,11 +7,9 @@ import iconThree from '../assets/iconThree.png'
 import { Link } from "react-router-dom";
 
 
-
 function Header() {
   return (
     <div className="header">
-        <Navbar />
       </div>
     );
 }
@@ -20,7 +18,7 @@ function BackgroundSection() {
   return (
     <div className="background-section">
       <div className="background-content">
-        <h1>WELCOME TO <span className="blue">FILMHOUND</span></h1>
+        <h1>WELCOME TO FILM<span className="blue">HOUND</span></h1>
         <Link to="/SearchedFilms">
           <button className="btn-browse">BROWSE</button>
         </Link>
@@ -56,7 +54,7 @@ function BackgroundSectionTwo() {
 function home() {
   return (
     <div>
-      <Header />
+      
       <BackgroundSection />
       <hr />
       <BoxesSection />

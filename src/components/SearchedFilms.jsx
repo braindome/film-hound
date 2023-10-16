@@ -20,14 +20,17 @@ const SearchedFilms = () => {
 
   const [title, setTitle] = useState('');
   const [filmData, setFilmData] = useState(null);
+  const [searchClicked, setSearchClicked] = useState(false); 
 
   const handleInput = (input) => {
     setTitle(input.target.value);
+    
   };
 
   const getFilm = async () => {
+    setSearchClicked(true);
     const searchByTitleUrl = `${BASE_URL}${API_KEY}${TITLE_SEARCH_PARAM}${title}`;
-
+  
     const response = await fetch(searchByTitleUrl);
     const filmData = await response.json();
 
@@ -36,18 +39,24 @@ const SearchedFilms = () => {
   };
 
   return (
-    <div className='search-content'>
-      <h1>FILM<span className='blue'>HOUND</span></h1>
-      <input className='input' type="text" value={title} onChange={handleInput} />
-      <button className='btn-search' onClick={getFilm}>Search</button>
-  
+    <div>
+{!searchClicked ? (
+  <div className='initial-search'>
+    <h1>FILM<span className='blue'>HOUND</span></h1>
+    <input className='input' type="text" value={title} onChange={handleInput} />
+    <button className='btn-search' onClick={getFilm}>Search</button>
+  </div>
+) : null}
+
       {filmData && (
-        <div>
-          <h1>Film Hound</h1>
+         <div className='search-content'>
+          
       <input type="text" value={title} onChange={handleInput} />
       <button onClick={getFilm}>Search</button>
           <h2>Search Results</h2>
+          
           <ul>
+            <div className="movies">
             {filmData.Search.map((film, index) => (
               <li key={index}>
                 <div>
@@ -59,13 +68,16 @@ const SearchedFilms = () => {
                     <p>IMDB ID: {film.imdbID}</p>
                     <a href={`http://www.imdb.com/title/${film.imdbID}`}>IMDB Page</a>
                   </div>
-                  <button onClick={() => handleBuy(film)} >Buy</button>
+                  <button className="buyMovieBtn" onClick={() => handleBuy(film)} >Buy</button>
                 </div>
                 <p>---------------------------------------------------------------------</p>
               </li>
               
+              
             ))}
+            </div>
           </ul>
+          
         </div>
       )}
     </div>

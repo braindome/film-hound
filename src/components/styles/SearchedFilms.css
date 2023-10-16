@@ -1,16 +1,53 @@
 .search-content {
     text-align: center;
-    padding-left: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
     padding-top: 7rem;
+    padding-bottom: 3rem;
+   
+
+  }
+
+.initial-search{
     position: fixed;
+  
 
 }
+
+.movies {
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    
+
+
+
+}
+/*
+.title1 {
+    color: rgb(255, 244, 244);
+    
+}
+*/
 .input {
-padding-top: 0.2rem;
+padding-top: 0.1rem;
+
+
 }
 .btn-search {
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
     margin-top: -2rem;
-    
+
+}
+.btn-search:hover {
+background-color: rgb(36, 116, 255);
+
+}
+
+.buyMovieBtn:hover {
+    background-color: rgba(36, 116, 255);
+    cursor: pointer;
+    transition: 0.3s ease-in;
 
 }
