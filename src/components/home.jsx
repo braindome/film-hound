@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
-        <Navbar />
       </div>
     );
 }
@@ -55,7 +54,7 @@ function BackgroundSectionTwo() {
 function home() {
   return (
     <div>
-      <Header />
+      
       <BackgroundSection />
       <hr />
       <BoxesSection />
