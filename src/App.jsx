@@ -23,6 +23,7 @@ export default function App() {
          
           <Route path="/SearchedFilms"  element={<SearchedFilms />} />
           <Route path="/checkout"  element={<ShoppingCart />} />
+          <Route path="/payment"  element={<Checkout />} />
 
         </Routes>
       </Router>
