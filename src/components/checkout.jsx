@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './checkout.css';
+import "./checkout.css";
+import { useSelector } from "react-redux";
 
 function Checkout() {
   const [showPhoneNumberInput, setShowPhoneNumberInput] = useState(false);
@@ -11,45 +12,46 @@ function Checkout() {
   const [paypalEmail, setPaypalEmail] = useState("");
 
   const navigate = useNavigate();
+  const username = useSelector((state) => state.user.username);
 
   const handleSwishClick = () => {
     setShowPhoneNumberInput(true);
     setShowKlarnaOptions(false);
     setShowPayPalInput(false);
-  }
+  };
 
   const handleKlarnaClick = () => {
     setShowKlarnaOptions(!showKlarnaOptions);
     setShowPhoneNumberInput(false);
     setShowPayPalInput(false);
-  }
+  };
 
   const handlePayPalClick = () => {
     setShowPayPalInput(true);
     setShowPhoneNumberInput(false);
     setShowKlarnaOptions(false);
-  }
+  };
 
   const handlePhoneNumberChange = (e) => {
     const inputValue = e.target.value;
     // Use a regular expression to match only numeric characters
-    const numericValue = inputValue.replace(/\D/g, ''); // Remove non-numeric characters
-  
+    const numericValue = inputValue.replace(/\D/g, ""); // Remove non-numeric characters
+
     setPhoneNumber(numericValue);
     setShowPayButton(!!numericValue);
-  }
+  };
 
   const handlePaypalEmailChange = (e) => {
     const emailValue = e.target.value;
     setPaypalEmail(emailValue);
     setShowPayButton(!!emailValue);
-  }
+  };
 
   const handlePayment = () => {
-    alert("Payment processed! Thank you for your purchase");
+    alert("Payment processed! Thank you for your purchase, " + username);
     // After the alert is dismissed, navigate back to the home page
-    navigate('/home');
-  }
+    navigate("/home");
+  };
 
   return (
     <div>
