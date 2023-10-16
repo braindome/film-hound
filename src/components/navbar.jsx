@@ -7,9 +7,12 @@ import UserLogin from "./UserLogin";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./navbar.css";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
+  const cartItems = useSelector((state) => state.cart);
+  const cartSize = cartItems.length;
 
   return (
     <div className="navbar">
@@ -27,7 +30,10 @@ export default function Navbar() {
           <img src={SearchIcon} />
         </Link>
         <Link to="/checkout">
-          <img src={ShoppingIcon} />
+          <div className="cart_icon_wrapper" >
+            {cartSize > 0 && <p>{cartSize}</p>}
+            <img src={ShoppingIcon} />
+          </div>
         </Link>
       </div>
     </div>
