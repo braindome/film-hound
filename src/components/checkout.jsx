@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./checkout.css";
 import { useSelector } from "react-redux";
+import swishImage from '../assets/swish.png'
+import klarnaImage from '../assets/klarna.png'
+import paypalImage from '../assets/paypal.png'
+
 
 function Checkout() {
   const [showPhoneNumberInput, setShowPhoneNumberInput] = useState(false);
@@ -54,10 +58,14 @@ function Checkout() {
   };
 
   return (
-    <div>
+    <div className="checkout-container">
       <h1>How do you want to pay?</h1>
       <div className="button-container">
-        <button onClick={handleSwishClick}>Swish</button>
+      <button onClick={handleSwishClick} className="swish-button">
+        <img src={swishImage} alt="Swish Logo" className="swish-image" />
+        <span className="swish-text">Swish</span>
+        </button>
+
         {showPhoneNumberInput && (
           <div>
             <input
@@ -74,7 +82,12 @@ function Checkout() {
           </div>
         )}
         <div className="klarna-container">
-          <button onClick={handleKlarnaClick}>Klarna</button>
+        <button onClick={handleKlarnaClick} className="klarna-button">
+        <img src={klarnaImage} alt="Klarna Logo" className="klarna-image" />
+        <span className="klarna-text">Klarna</span>
+    </button>
+
+
           {showKlarnaOptions && (
             <div className="klarna-options">
               <button onClick={handlePayment}>Pay now</button>
@@ -83,7 +96,12 @@ function Checkout() {
             </div>
           )}
         </div>
-        <button onClick={handlePayPalClick}>PayPal</button>
+        <button onClick={handlePayPalClick} className="paypal-button">
+        <img src={paypalImage} alt="PayPal Logo" className="paypal-image" />
+        <span className="paypal-text">PayPal</span>
+        </button>
+
+
         {showPayPalInput && (
           <div>
             <input

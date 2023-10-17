@@ -1,4 +1,16 @@
-/* Updated styles for a more professional design */
+
+.checkout-container {
+    margin-left: auto;
+    margin-right: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+  }
+  
+
+
 .button-container {
     display: flex;
     flex-direction: column;
@@ -6,11 +18,11 @@
   }
   
   .button-container button {
-    margin: 10px 0; /* Increase vertical margin for buttons */
-    padding: 10px 20px; /* Increase padding for buttons */
+    margin: 10px 0; 
+    padding: 10px 20px; 
     width: 300px;
-    background-color: #0074cc; /* Change button background color */
-    color: #fff; /* Change button text color */
+    background-color: #b2b4b6; 
+    color: #222121; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -18,11 +30,11 @@
   }
   
   .button-container button:hover {
-    background-color: #005599; /* Change button background color on hover */
+    background-color: #005599; 
   }
   
   .pay-button {
-    font-size: 16px !important; /* Add !important to prioritize this style */
+    font-size: 16px !important; 
     padding: 10px 20px !important;
     width: 200px !important;
     height: 40px !important;
@@ -43,9 +55,9 @@
   
   .klarna-options button {
     margin: 5px;
-    padding: 10px 20px; /* Increase padding for Klarna options */
-    background-color: #f1c40f; /* Change Klarna options button color */
-    color: #000; /* Change Klarna options text color */
+    padding: 10px 20px; 
+    background-color: #f1c40f; 
+    color: #000; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -53,6 +65,58 @@
   }
   
   .klarna-options button:hover {
-    background-color: #d4ac0d; /* Change Klarna options button color on hover */
+    background-color: #d4ac0d; 
+  }
+
+
+.swish-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
   }
   
+  .swish-image {
+    width: 30px; 
+    height: auto; 
+    margin-right: 10px; 
+  }
+  
+  .swish-text {
+    flex-grow: 1; 
+    text-align: center; 
+  }
+  
+
+.klarna-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+  }
+  
+  .klarna-image {
+    width: 30px;
+    height: auto; 
+    margin-right: 10px; 
+  }
+  
+  .klarna-text {
+    flex-grow: 1; 
+    text-align: center; 
+  }
+  
+
+.paypal-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .paypal-image {
+    width: 30px; 
+    height: auto; 
+    margin-right: 10px;
+  }
+  
+  .paypal-text {
+    flex-grow: 1; 
+    text-align: center; 
+  }
