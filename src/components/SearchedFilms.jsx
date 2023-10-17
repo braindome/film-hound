@@ -91,30 +91,25 @@ const SearchedFilms = () => {
 
   return (
     <div>
-      {!searchClicked ? (
-        <div className="initial-search">
-          <h2 className="noResult">{message}</h2>
-          <h1>
-            FILM<span className="blue">HOUND</span>
-          </h1>
-          <input
-            className="input"
-            type="text"
-            value={title}
-            onChange={handleInput}
-          />
-          <button className="btn-search" onClick={getFilm}>
-            Search
-          </button>
-          <button onClick={getFilmDetails}>Test</button>
-        </div>
-      ) : null}
 
-      {filmData ? (
-        <div className="search-content">
+{!searchClicked ? (
+  <div className='initial-search'>
+     <h2 className='noResult'>{message}</h2>
+    <h1 className='searchField'>Search<span className='blue'>Here</span></h1>
+    <input className='input' type="text" value={title} onChange={handleInput} />
+    <button className='btn-search' onClick={getFilm}>Search</button>
+       <button onClick={getFilmDetails}>Test</button>
+  </div>
+) : null}
+
+      {filmData ?  (
+         <div className='search-content'>
+
+          
           <h1>Film Hound</h1>
           <input type="text" value={title} onChange={handleInput} />
           <button onClick={getFilm}>Search</button>
+
           <h2>Search Results</h2>
           <ul>
             <div className="movies">
