@@ -12,7 +12,7 @@
 
 .initial-search{
     position: fixed;
-  
+   
 
 }
 
@@ -20,7 +20,8 @@
     display: grid;
     grid-template-columns: 1fr  1fr 1fr;
     margin-top: 10px;
-
+    
+ 
 
 
 }
@@ -73,11 +74,11 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 50px;
-    margin-bottom: 15px;
-    margin-top: 10px;
+    
+  
 }
 
 .poster{
     height: 100%;
+    margin-right: -40px;
 }
