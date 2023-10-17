@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles/SearchedFilms.css';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../features/action';
+import fallback from '/src/assets/NoImage.png';
 
 
 
@@ -81,7 +82,8 @@ const SearchedFilms = () => {
             {filmData.Search.map((film, index) => (
               <li key={index}>
                 <div>
-                  <img src={film.Poster} alt={film.Title} />
+                  <img src={film.Poster} 
+                  onError={(e) => (e.currentTarget.src = fallback)} alt={film.Title} />
                   <div>
                     <h3>{film.Title}</h3>
                     <p>Type: {film.Type}</p>

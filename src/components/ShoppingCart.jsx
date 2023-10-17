@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import CartItem from "./CartItem";
 import "./styles/ShoppingCart.css";
+
 import { Link } from "react-router-dom";
 
 const ShoppingCart = () => {
