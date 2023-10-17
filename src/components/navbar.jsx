@@ -27,6 +27,7 @@ export default function Navbar() {
           <img src={HomeIcon} />
         </Link>
         <Link to="/SearchedFilms">
+        
           <img src={SearchIcon} />
         </Link>
         <Link to="/checkout">
