@@ -47,10 +47,15 @@ margin-left: 450px;
     padding-top: 0.3rem;
     margin-top: -2rem;
     margin-left: 40px;
+    
 }
 .btn-search:hover {
 background-color: rgb(36, 116, 255);
 
+}
+
+.buyMovieBtn {
+    margin-right: 10px;
 }
 
 .buyMovieBtn:hover {
