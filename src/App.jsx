@@ -3,6 +3,7 @@ import Home from "./components/home";
 import SearchedFilms from "./components/SearchedFilms";
 import Checkout from "./components/checkout";
 import "./App.css";
+import UserLogin from "./components/UserLogin";
 
 import ShoppingCart from "./components/ShoppingCart";
 
@@ -23,6 +24,7 @@ export default function App() {
          
           <Route path="/SearchedFilms"  element={<SearchedFilms />} />
           <Route path="/checkout"  element={<ShoppingCart />} />
+          <Route path="/payment"  element={<Checkout />} />
 
         </Routes>
       </Router>

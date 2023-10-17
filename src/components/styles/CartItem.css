@@ -1,0 +1,22 @@
+.cart_item {
+    border: 2px solid greenyellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+.cart_item img {
+    height: 200px;
+}
+
+.cart_item button {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
