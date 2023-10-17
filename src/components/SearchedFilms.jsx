@@ -21,6 +21,7 @@ const SearchedFilms = () => {
   const [title, setTitle] = useState('');
   const [filmData, setFilmData] = useState(null);
   const [searchClicked, setSearchClicked] = useState(false); 
+  const [message, setMessage] = useState('');
 
   const handleInput = (input) => {
     setTitle(input.target.value);
@@ -31,26 +32,44 @@ const SearchedFilms = () => {
     setSearchClicked(true);
     const searchByTitleUrl = `${BASE_URL}${API_KEY}${TITLE_SEARCH_PARAM}${title}`;
   
-    const response = await fetch(searchByTitleUrl);
-    const filmData = await response.json();
-
-    console.log(filmData);
-    setFilmData(filmData);
+    try {
+      const response = await fetch(searchByTitleUrl);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const filmData = await response.json();
+  
+      if (filmData.Response === "False") {
+        console.log("Movie not found");
+        setMessage ("Movie not found");
+        setSearchClicked(false);
+        setFilmData(null);
+      } else {
+        console.log(filmData);
+        setFilmData(filmData);
+       
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+  
+    }
   };
 
   return (
     <div>
 {!searchClicked ? (
   <div className='initial-search'>
+     <h2 className='noResult'>{message}</h2>
     <h1>FILM<span className='blue'>HOUND</span></h1>
     <input className='input' type="text" value={title} onChange={handleInput} />
     <button className='btn-search' onClick={getFilm}>Search</button>
   </div>
 ) : null}
 
-      {filmData && (
+      {filmData ?  (
          <div className='search-content'>
           <h1>Film Hound</h1>
+         
       <input type="text" value={title} onChange={handleInput} />
       <button onClick={getFilm}>Search</button>
           <h2>Search Results</h2>
@@ -74,7 +93,7 @@ const SearchedFilms = () => {
             ))}
           </ul>
         </div>
-      )}
+      ):null}
     </div>
   );
   
