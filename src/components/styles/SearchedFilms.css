@@ -21,7 +21,7 @@
     grid-template-columns: 1fr  1fr 1fr;
     margin-top: 10px;
     
- 
+   margin-left: 70px;
 
 
 }
@@ -85,5 +85,5 @@ ul{
 
 .poster{
     height: 100%;
-    margin-right: -40px;
+    margin-left: 60px;
 }
