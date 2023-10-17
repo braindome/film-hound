@@ -51,3 +51,26 @@ background-color: rgb(36, 116, 255);
     transition: 0.3s ease-in;
 
 }
+
+ul{
+    list-style: none;
+}
+
+.posterContainer{
+  
+    height: 350px;
+    width: 300px;
+    max-width: 80vw;
+    max-height: 80vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.poster{
+    height: 100%;
+}

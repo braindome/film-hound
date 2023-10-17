@@ -118,14 +118,15 @@ const SearchedFilms = () => {
           <h2>Search Results</h2>
           <ul>
             <div className="movies">
-              {filmData.Search.map((film, index) => (
-                <li key={index}>
-                  <div>
-                    <img
-                      src={film.Poster}
-                      onError={(e) => (e.currentTarget.src = fallback)}
-                      alt={film.Title}
-                    />
+
+            {filmData.Search.map((film, index) => (
+              <li key={index}>
+                <div>
+                <div className='posterContainer'>
+                  <img className="poster" src={film.Poster} 
+                  onError={(e) => (e.currentTarget.src = fallback)} alt={film.Title} />
+                  </div>
+
                     <div>
                       <h3>{film.Title}</h3>
                       <p>Type: {film.Type}</p>
