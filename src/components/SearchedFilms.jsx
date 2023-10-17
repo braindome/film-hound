@@ -123,7 +123,7 @@ const SearchedFilms = () => {
                   </div>
 
                     <div>
-                      <h3>{film.Title}</h3>
+                      <h3 className="filmTitle">{film.Title}</h3>
                       <p>Type: {film.Type}</p>
                       <p>Year: {film.Year}</p>
                       <p>IMDB ID: {film.imdbID}</p>

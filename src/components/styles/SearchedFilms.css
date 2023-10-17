@@ -87,3 +87,9 @@ ul{
     height: 100%;
     margin-left: 60px;
 }
+
+
+.filmTitle {
+    align-items: center;
+    margin-right: 10px;
+}
