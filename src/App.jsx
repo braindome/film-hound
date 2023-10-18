@@ -7,7 +7,7 @@ import UserLogin from "./components/UserLogin";
 
 import ShoppingCart from "./components/ShoppingCart";
 
-import { BrowserRouter as Router, Route, Routes, Outlet } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, Outlet } from "react-router-dom";
 
 
 export default function App() {
