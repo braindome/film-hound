@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import CartItem from "./CartItem";
 import "./styles/ShoppingCart.css";
-
 import { Link } from "react-router-dom";
 
 const ShoppingCart = () => {
@@ -12,7 +11,7 @@ const ShoppingCart = () => {
 
   return (
     <div className="cart_wrapper">
-      <h2>Shopping Cart</h2>
+      <h2>Shopping</h2>
       <h3>Here's your cart, {username} </h3>
       {cartItems.map((film, index) => (
         <CartItem key={index} film={film} />

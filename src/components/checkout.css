@@ -7,9 +7,9 @@
     align-items: center;
     justify-content: center;
     height: 100vh; 
+    margin-left: 400px;
+    color: white;
   }
-  
-
 
 .button-container {
     display: flex;
@@ -18,10 +18,10 @@
   }
   
   .button-container button {
-    margin: 10px 0; 
+    margin: 5px 0; 
     padding: 10px 20px; 
     width: 300px;
-    background-color: #b2b4b6; 
+    background-color: #f5f5f5; 
     color: #222121; 
     border: none;
     border-radius: 5px;
@@ -30,7 +30,7 @@
   }
   
   .button-container button:hover {
-    background-color: #005599; 
+    background-color: #0d7edb; 
   }
   
   .pay-button {

@@ -26,23 +26,25 @@ const UserLogin = () => {
       {loggedIn ? (
         <div>
           <div>Welcome, {username}</div>
-          <button onClick={handleLogout}>Logout</button>
+          <button className="logout_btn" onClick={handleLogout}>Logout</button>
         </div>
       ) : (
         <div>
-          <input
+          <input className="input-user"
             type="text"
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <input
+          <input className="input-password"
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleLogin}>Sign In</button>
+          <div className="btn-design">
+          <button className="login_btn" onClick={handleLogin}>Sign In</button>
+          </div>
         </div>
       )}
     </div>
