@@ -16,7 +16,7 @@
 
 
 .title {
-    font-size: 30px;
+    font-size: 5rem;
     margin-left: -130px;
     color: white;
 }
@@ -32,12 +32,26 @@
    }
    
 
+#nav-btn{
 
+  color: whitesmoke;
+    background-color:  #007bff;
+    display: flex;
+
+    width: fit-content;
+}
 .navbar .leftSide img {
     padding: 1.2rem;
     width: 120px;
     color: rgb(19, 19, 18);
    
+   }
+
+   .input2{
+    border-radius: 5px;
+    height: 2rem;
+    padding: 5px;
+    font-size: large;
    }
    
    
