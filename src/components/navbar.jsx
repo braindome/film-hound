@@ -29,20 +29,21 @@ export default function Navbar() {
       <UserLogin />
 
       <div className="leftSide" id={openLinks ? "open" : "close"}>
+
+      <Link to="/home">
       <h1 className="title">FILM<span className='blue'>HOUND</span></h1>
+      </Link>
         <div className="hiddenLinks"></div>
       </div>
       <div className="rightSide">
-        <Link to="/home">
-          <img src={HomeIcon} />
-        </Link>
+   
         
         
 
     
-        <input type="text" value={filmTitle} onChange={(e)=> setFilmTitle (e.target.value)}/>
+        <input type="text" value={filmTitle} onChange={(e)=> setFilmTitle (e.target.value)} className="input2"/>
         <Link to="/SearchedFilms">
-        <button onClick={handleSearchString} >Search </button>       
+        <button onClick={handleSearchString} id="nav-btn" > <img src={SearchIcon} alt="  Search" />Search </button>       
         </Link>
         <Link to="/checkout">
           <div className="cart_icon_wrapper" >
