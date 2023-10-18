@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/SearchedFilms.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/action";
 import fallback from "/src/assets/NoImage.png";
 
@@ -12,6 +12,8 @@ const SearchedFilms = () => {
   const dispatch = useDispatch();
 
   const [expanded, setExpanded] = useState(false);
+  const filmTitle = useSelector((state)=> state.film.film)
+  console.log(filmTitle)
   let btnName = expanded ? "LESS" : "MORE"
 
   const handleBuy = (film) => {
@@ -27,6 +29,15 @@ const SearchedFilms = () => {
 
   const handleInput = (input) => {
     setTitle(input.target.value);
+  };
+
+  const getTitleAndSearch = () => {
+    if (filmTitle !== "") {
+      setTitle(filmTitle);
+      setSearchClicked(true);
+      getFilmDetails(filmTitle);
+      getFilm();
+    }
   };
 
   const handleFilmDetailsClick = (film) => {
@@ -83,14 +94,26 @@ const SearchedFilms = () => {
       } else {
         console.log(filmData);
         setFilmData(filmData);
+        setSearchClicked(true);
       }
     } catch (error) {
       console.error("Error fetching data: ", error);
     }
   };
+  useEffect(() => {
+    getTitleAndSearch();
+  }, []);
+
+  useEffect(() => {
+    getTitleAndSearch();
+  }, [filmTitle]);
+  useEffect(() => {
+    getTitleAndSearch();
+  }, [title]);
 
   return (
     <div>
+   
 
 {!searchClicked ? (
   <div className='initial-search'>
@@ -106,9 +129,6 @@ const SearchedFilms = () => {
          <div className='search-content'>
 
           
-        
-          <input type="text" value={title} onChange={handleInput} />
-          <button onClick={getFilm}>Search</button>
 
           <h2>Search Results</h2>
           <ul>
