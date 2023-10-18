@@ -20,27 +20,22 @@
     display: grid;
     grid-template-columns: 1fr  1fr 1fr;
     margin-top: 10px;
-    
-   margin-left: 70px;
+    margin-left: 70px;
 
 
 }
 
 .searchField {
- margin-left: 450px;
+ margin-left: 550px;
+ margin-top: -100px;
+ color: white;
  
 
 }
-/*
-.title1 {
-    color: rgb(255, 244, 244);
-    
-}
-*/
 .input {
 padding-top: 0.1rem;
 border-radius: 2px solid;
-margin-left: 450px;
+margin-left: 570px;
 
 }
 .btn-search {

@@ -2,16 +2,16 @@
     display: flex;
     flex-direction: column;
     padding: 2px;
-    margin-top: 5px;
-    padding-left: 1px;
+    margin-top: 20px;
+    padding-left: 0px;
     
 }
 .login_btn {
     color: white;
     background-color: rgb(0, 140, 255);
-    margin-top: 5px;
-    height: 40px;
-    margin-left: 0; 
+    height: 60px;
+    margin-left: 150px; 
+    width: 100px;
 }
 .logout_btn {
     color: white;
@@ -25,7 +25,6 @@
     background-color: rgb(172, 172, 172);
 }
 .input-user {
-    
     background-color: rgb(39, 39, 39);
 }
 .input-password {
