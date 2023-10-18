@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styles/SearchedFilms.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/action";
-import fallback from "/src/assets/NoImage.png";
+import SearchItem from "./SearchItem.jsx";
 
 const API_KEY = "973b4444";
 const BASE_URL = "http://www.omdbapi.com/?apikey=";
@@ -11,48 +11,41 @@ const TITLE_SEARCH_PARAM = "&s=";
 const SearchedFilms = () => {
   const dispatch = useDispatch();
 
-  const [expanded, setExpanded] = useState(false);
-  const filmTitle = useSelector((state)=> state.film.film)
-  console.log(filmTitle)
-  let btnName = expanded ? "LESS" : "MORE"
+  const filmTitle = useSelector((state) => state.film.film);
+  console.log("Title of film from navbar: " + filmTitle);
 
   const handleBuy = (film) => {
     dispatch(addToCart(film));
   };
 
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState(filmTitle);
   const [filmData, setFilmData] = useState(null);
   const [searchClicked, setSearchClicked] = useState(false);
   const [message, setMessage] = useState("");
-  const [fullFilmData, setFullFilmData] = useState(null)
-  const [selectedFilm, setSelectedFilm] = useState(null)
+
+  useEffect(() => {
+    setTitle(filmTitle);
+    if (filmTitle) {
+      getFilm();
+    }
+  }, [filmTitle]);
+
 
   const handleInput = (input) => {
     setTitle(input.target.value);
   };
 
-  const getTitleAndSearch = () => {
-    if (filmTitle !== "") {
-      setTitle(filmTitle);
-      setSearchClicked(true);
-      getFilmDetails(filmTitle);
-      getFilm();
-    }
-  };
 
   const handleFilmDetailsClick = (film) => {
-    console.log("Clicking on preview", film)
-    setSelectedFilm(film)
-  }
+    console.log("Clicking on preview", film);
+    setSelectedFilm(film);
+  };
 
   const getFilmDetails = async (imdbID) => {
     const apiUrl = `${BASE_URL}${API_KEY}`;
     const fullPlot = "&plot=full";
     const filmIdParam = "&i=";
 
-    const testId = "tt0371746";
-    const testUrl =
-      "http://www.omdbapi.com/?apikey=973b4444&i=tt0371746&plot=full";
     const filmUrl = apiUrl + filmIdParam + imdbID + fullPlot;
 
     console.log(filmUrl);
@@ -63,15 +56,17 @@ const SearchedFilms = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const data = await response.json();
-      if (data.Response === "False") {
+      /*  if (data.Response === "False") {
         console.log("Movie details not found");
         setFullFilmData(false);
       } else {
         console.log(data);
         setFullFilmData(data);
-      }
+      }*/
+      return data;
     } catch (error) {
       console.error("Error fetching film: ", error);
+      throw error;
     }
   };
 
@@ -100,30 +95,49 @@ const SearchedFilms = () => {
       console.error("Error fetching data: ", error);
     }
   };
-  useEffect(() => {
-    getTitleAndSearch();
-  }, []);
 
-  useEffect(() => {
-    getTitleAndSearch();
-  }, [filmTitle]);
-  useEffect(() => {
-    getTitleAndSearch();
-  }, [title]);
+
+
 
   return (
     <div>
-   
+      {!searchClicked ? (
+        <div className="initial-search">
+          <h2 className="noResult">{message}</h2>
+          <h1 className='searchField'>Search<span className='blue'>Here</span></h1>
+          <input className='input' type="text" value={title} onChange={handleInput} />
+          <button className='btn-search' onClick={getFilm}>Search</button>
+        </div>
+      ) : null}
+      {filmData ? (
+        <div className="search-content">
+          <h2>Search Results</h2>
 
-{!searchClicked ? (
-  <div className='initial-search'>
-     <h2 className='noResult'>{message}</h2>
-    <h1 className='searchField'>Search<span className='blue'>Here</span></h1>
-    <input className='input' type="text" value={title} onChange={handleInput} />
-    <button className='btn-search' onClick={getFilm}>Search</button>
-  </div>
-) : null}
+          <ul>
+            <div className="movies">
+              {filmData.Search.map((film, index) => (
+                <li key={index}>
+                  <SearchItem
+                    //key={index}
+                    film={film}
+                    handleBuy={handleBuy}
+                    getFilmDetails={getFilmDetails}
+                  />
+                </li>
+              ))}
+            </div>
+          </ul>
+        </div>
+      ) : null}
+    </div>
+  );
+};
 
+
+export default SearchedFilms;
+
+{
+  /*
       {filmData ?  (
          <div className='search-content'>
 
@@ -132,6 +146,8 @@ const SearchedFilms = () => {
           <h2>Search Results</h2>
           <ul>
             <div className="movies">
+
+              
 
             {filmData.Search.map((film, index) => (
               <li key={index}>
@@ -188,4 +204,5 @@ const SearchedFilms = () => {
   );
 };
 
-export default SearchedFilms;
+export default SearchedFilms; */
+}
