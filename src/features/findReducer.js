@@ -19,4 +19,4 @@ const findReducer = createReducer(initialState, (builder) => {
      
 })
 
-export { actions, findReducer }
+export { actions, findReducer, findFilm }
