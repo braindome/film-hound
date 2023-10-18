@@ -121,7 +121,6 @@ const SearchedFilms = () => {
     <h1 className='searchField'>Search<span className='blue'>Here</span></h1>
     <input className='input' type="text" value={title} onChange={handleInput} />
     <button className='btn-search' onClick={getFilm}>Search</button>
-       <button onClick={getFilmDetails}>Test</button>
   </div>
 ) : null}
 
@@ -144,10 +143,10 @@ const SearchedFilms = () => {
 
                     <div>
                       <h3 className="filmTitle">{film.Title}</h3>
-                      <p>Type: {film.Type}</p>
-                      <p>Year: {film.Year}</p>
-                      <p>IMDB ID: {film.imdbID}</p>
-                      <a href={`http://www.imdb.com/title/${film.imdbID}`}>
+                      <p className="type">Type: {film.Type}</p>
+                      <p className="year">Year: {film.Year}</p>
+                      <p className="imdb">IMDB ID: {film.imdbID}</p>
+                      <a className="link" href={`http://www.imdb.com/title/${film.imdbID}`}>
                         IMDB Page
                       </a>
                     </div>

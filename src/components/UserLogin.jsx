@@ -27,25 +27,34 @@ const UserLogin = () => {
         <div>
           <div>Welcome, {username}</div>
           <button className="logout_btn" onClick={handleLogout}>Logout</button>
+          
         </div>
+        
       ) : (
+        
         <div>
+          
           <input className="input-user"
             type="text"
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
+          
           <input className="input-password"
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            
           />
           <div className="btn-design">
-          <button className="login_btn" onClick={handleLogin}>Sign In</button>
-          </div>
+        <button className="login_btn" onClick={handleLogin}>Sign In</button>
         </div>
+          
+        </div>
+        
+        
       )}
     </div>
   );
