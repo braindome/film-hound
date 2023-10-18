@@ -10,7 +10,7 @@
     font-family: 'Poppins', sans-serif;
     border-bottom: rgba(192, 150, 150, 0.098) solid 1px;
     z-index: 1000; 
-  }
+}
 
 
 .title {
@@ -31,11 +31,11 @@
     padding-left: 140px;
 
    
-   }
+}
 
-   .home-icon {
+.home-icon {
     padding-left: 150px;
-   }
+}
 
 #nav-btn{
 
@@ -43,70 +43,72 @@
     display: flex;
     width: fit-content;
 }
+
 .navbar .leftSide img {
+
     padding: 1.2rem;
     width: 120px;
     color: rgb(19, 19, 18);
    
-   }
+}
 
-   .input2{
+.input2 {
     border-radius: 5px;
     height: 2rem;
     padding: 5px;
     font-size: large;
-   }
+}
    
    
    
    
-   .navbar .rightSide {
+.navbar .rightSide {
    
-       flex: 50%;
-       height: 100%;
-       display: flex;
-       align-items: center;
-       padding-right: 10px;
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
        
    
-   }
+}
    
    
    
    
    
-   .navbar a {
-   
+.navbar a {
+
     color: rgb(9, 8, 8);
     padding:10px;
     text-decoration: none;
     font-weight: lighter;
     margin: 35px;
-   
-   
-   
-   }
-   
-   .navbar .rightSide button {
-   
+
+
+
+}
+
+.navbar .rightSide button {
+
     background-color: transparent;
     border: none;
     color: rgb(82, 34, 240);
     cursor: pointer;
     padding-right: 5rem;
-   
-   
-   }
 
-   .cart_icon_wrapper {
+
+}
+
+.cart_icon_wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-   }
 
-   .cart_icon_wrapper p {
+}
+
+.cart_icon_wrapper p {
     position: absolute;
     top: 40%;
     left: 30%;
@@ -121,6 +123,30 @@
     display: flex;
     justify-content: center;
 
-   }
+}
+
+@media (max-width: 320px) {
+    .navbar {
+        display: flex;
+
+
+    }
+
+
+    .title {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 1024px) {
+
+
+}
    
    

@@ -7,7 +7,7 @@
     padding-left: 0px;
     margin: 5px;
     padding-left: 1px;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .user_bar:hover {
