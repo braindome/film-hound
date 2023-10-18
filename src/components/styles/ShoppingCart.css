@@ -1,16 +1,21 @@
 .cart_wrapper {
-    border: solid 2px blue;
     display: flex;
+    color: white;
     flex-direction: column;
     margin: 100px;
     padding: 20px;
-    min-width: 500px;
+    min-width: 50px;
+    text-align: center;
+    margin-left: 400px;
+
 }
 
 .checkout_row {
-    /* border: solid 2px blueviolet; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.cart-title {
+    color: white;
 }
 

@@ -59,7 +59,7 @@ function Checkout() {
 
   return (
     <div className="checkout-container">
-      <h1>How do you want to pay?</h1>
+      <h1>How do you want to <span className="blue">pay?</span></h1>
       <div className="button-container">
       <button onClick={handleSwishClick} className="swish-button">
         <img src={swishImage} alt="Swish Logo" className="swish-image" />
