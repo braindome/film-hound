@@ -30,6 +30,13 @@ const SearchedFilms = () => {
     }
   }, [filmTitle]);
 
+  useEffect(() => {
+    setTitle(filmTitle);
+    if (filmTitle) {
+      getFilm();
+    }
+  }, [title]);
+
 
   const handleInput = (input) => {
     setTitle(input.target.value);
