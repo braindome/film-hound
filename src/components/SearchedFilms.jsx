@@ -133,6 +133,7 @@ const SearchedFilms = () => {
   );
 };
 
+
 export default SearchedFilms;
 
 {
@@ -158,10 +159,10 @@ export default SearchedFilms;
 
                     <div>
                       <h3 className="filmTitle">{film.Title}</h3>
-                      <p>Type: {film.Type}</p>
-                      <p>Year: {film.Year}</p>
-                      <p>IMDB ID: {film.imdbID}</p>
-                      <a href={`http://www.imdb.com/title/${film.imdbID}`}>
+                      <p className="type">Type: {film.Type}</p>
+                      <p className="year">Year: {film.Year}</p>
+                      <p className="imdb">IMDB ID: {film.imdbID}</p>
+                      <a className="link" href={`http://www.imdb.com/title/${film.imdbID}`}>
                         IMDB Page
                       </a>
                     </div>

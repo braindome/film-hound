@@ -6,41 +6,39 @@
     align-items: center; 
     padding-top: 7rem;
     padding-bottom: 3rem;
+    color: white;
+    padding-left: 30px;
+
     
 
   }
 
 .initial-search{
     position: fixed;
+    
    
-
 }
 
 .movies {
     display: grid;
     grid-template-columns: 1fr  1fr 1fr;
     margin-top: 10px;
-    
-   margin-left: 70px;
+    margin-left: 50px;
 
 
 }
 
 .searchField {
- margin-left: 450px;
+ margin-left: 550px;
+ margin-top: -100px;
+ color: white;
  
 
 }
-/*
-.title1 {
-    color: rgb(255, 244, 244);
-    
-}
-*/
 .input {
 padding-top: 0.1rem;
 border-radius: 2px solid;
-margin-left: 450px;
+margin-left: 570px;
 
 }
 .btn-search {
@@ -79,7 +77,6 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    
   
 }
 
@@ -91,5 +88,24 @@ ul{
 
 .filmTitle {
     align-items: center;
+    margin-right: 70px;
+}
+.type {
+    margin-right: 70px;
+}
+.year {
+    margin-right: 70px;
+}
+.imdb {
+    margin-right: 70px;
+}
+.link {
+    margin-right: 70px;
+}
+.buyMovieBtn {
     margin-right: 10px;
+    margin-top: 20px;
+}
+.more-info-btn {
+    margin-right: 70px;
 }
