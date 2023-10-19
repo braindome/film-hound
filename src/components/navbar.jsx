@@ -54,9 +54,13 @@ export default function Navbar() {
               className="input2"
             />
             <Link to="/SearchedFilms">
-              <button onClick={handleSearchString} id="nav-btn">
-                <img src={SearchIcon} alt="Search" /> Search
-              </button>
+              {/* <button onClick={handleSearchString} id="nav-btn">
+                <img src={SearchIcon} alt="Search" /> 
+              </button> */}
+              <span onClick={handleSearchString} id="nav-btn">
+                <img src={SearchIcon} alt="Search" /> 
+
+              </span>
             </Link>
           </div>
 
@@ -66,10 +70,10 @@ export default function Navbar() {
           </a>
         )}
         <Link to="/checkout">
-          <div className="cart_icon_wrapper">
+          <span className="cart_icon_wrapper">
             {cartSize > 0 && <p>{cartSize}</p>}
             <img src={ShoppingIcon} />
-          </div>
+          </span>
         </Link>
         <UserLogin />
       </div>
