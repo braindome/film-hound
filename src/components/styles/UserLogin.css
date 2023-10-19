@@ -43,3 +43,29 @@
 .input-password {
     background-color: rgb(39, 39, 39);
 }
+
+@media (max-width: 374px) {
+    .user_bar {
+        padding: 0;
+        
+        width: 80px;
+
+
+    }
+
+    .input-password,
+    .input-user {
+        width: 70px;
+        height: 10px;
+    }
+
+    /* .input-user,
+    .input-password,
+    .auth-btn {
+        width: 80%;
+        height: 10px;
+        font-size: xx-small;
+        padding: 0;
+        margin: 0;
+    } */
+}

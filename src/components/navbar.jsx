@@ -57,10 +57,10 @@ export default function Navbar() {
               {/* <button onClick={handleSearchString} id="nav-btn">
                 <img src={SearchIcon} alt="Search" /> 
               </button> */}
-              <span onClick={handleSearchString} id="nav-btn">
+              <button onClick={handleSearchString} id="nav-btn">
                 <img src={SearchIcon} alt="Search" /> 
 
-              </span>
+              </button>
             </Link>
           </div>
 
