@@ -92,16 +92,33 @@ ul{
 
 
 @media (max-width: 320px) {
-
+    .search-content{
+   grid-template-columns: 1fr;
+  
+    
+ }
+ 
 
 }
 
 @media (max-width: 768px) {
+  .search-content {
 
-
+    grid-template-columns: 1fr  ;
+    margin-right: 500px;
+    margin-left: 160px;
+    max-width: 80px;
+  }
+  
 }
 
 @media (max-width: 1024px) {
 
-
+ .movies {
+    grid-template-columns: 1fr  ;
+    margin-right: 400px;
+    margin-left: 30px;
+    max-width: 70px;
+ }
 }
+
