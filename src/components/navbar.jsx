@@ -33,23 +33,20 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <UserLogin />
-
       <div className="leftSide" id={openLinks ? "open" : "close"}>
         <Link to="/home">
           <h1 className="title">
             FILM<span className="blue">HOUND</span>
           </h1>
         </Link>
-        
-        <div className="hiddenLinks"></div>
       </div>
       <div className="rightSide">
-      <Link to="/home">
-        <img className="home-icon" src={HomeIcon} alt="home" />
-        </Link>
+        {/* <Link to="/home">
+          <img className="home-icon" src={HomeIcon} alt="home" />
+        </Link> */}
         {searchVisible ? (
-          <>
+
+          <div className="search-section">
             <input
               type="text"
               value={filmTitle}
@@ -57,22 +54,28 @@ export default function Navbar() {
               className="input2"
             />
             <Link to="/SearchedFilms">
+              {/* <button onClick={handleSearchString} id="nav-btn">
+                <img src={SearchIcon} alt="Search" /> 
+              </button> */}
               <button onClick={handleSearchString} id="nav-btn">
-                <img src={SearchIcon} alt="Search" /> Search
+                <img src={SearchIcon} alt="Search" /> 
+
               </button>
             </Link>
-          </>
+          </div>
+
         ) : (
           <a onClick={toggleSearchInput} id="nav-btn">
             <img src={SearchIcon} alt="Search" />
           </a>
         )}
         <Link to="/checkout">
-          <div className="cart_icon_wrapper">
+          <span className="cart_icon_wrapper">
             {cartSize > 0 && <p>{cartSize}</p>}
             <img src={ShoppingIcon} />
-          </div>
+          </span>
         </Link>
+        <UserLogin />
       </div>
     </div>
   );

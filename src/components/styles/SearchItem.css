@@ -1,7 +1,7 @@
 .search-item-container {
 	display: flex;
 	flex-direction: column;
-	width: 360px;
+	width: 320px;
 	height: auto;
 	min-height: 650px;
     border: solid 2px rgb(26, 86, 215);
