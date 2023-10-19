@@ -89,35 +89,6 @@ ul{
 
 
 
-.poster{
-    height: 100%;
-    margin-left: 60px;
-}
-
-
-.filmTitle {
-    align-items: center;
-    margin-right: 70px;
-}
-.type {
-    margin-right: 70px;
-}
-.year {
-    margin-right: 70px;
-}
-.imdb {
-    margin-right: 70px;
-}
-.link {
-    margin-right: 70px;
-}
-.buyMovieBtn {
-    margin-right: 10px;
-    margin-top: 20px;
-}
-.more-info-btn {
-    margin-right: 70px;
-}
 
 
 @media (max-width: 320px) {

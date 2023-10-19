@@ -1,0 +1,83 @@
+.search-item-container {
+
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: auto;
+	min-height: 650px;
+	border: solid 2px rgb(36, 116, 255);
+	margin: 10px;
+	border-radius: 15px;
+	transition: height 0.5s ease-in;
+
+}
+
+.search-item-container.expanded {
+
+	width: 350px;
+
+}
+
+.title-poster {
+
+	overflow: visible;
+
+}
+
+.poster{
+
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+
+.year-type-row {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+.plot {
+
+	font-size: small;
+	margin: 15px;
+
+}
+
+.detailed-info-bottom-container {
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+}
+
+.btn-search {
+
+	padding-top: 0.3rem;
+	margin-top: -2rem;
+	margin-left: 40px;
+
+}
+
+.btn-search:hover {
+
+	background-color: rgb(36, 116, 255);
+
+}
+
+.buyMovieBtn {
+
+	margin-right: 10px;
+
+}
+
+.buyMovieBtn:hover {
+
+	background-color: rgba(36, 116, 255);
+	cursor: pointer;
+	transition: 0.3s ease-in;
+
+}
