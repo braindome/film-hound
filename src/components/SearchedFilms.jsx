@@ -38,9 +38,6 @@ const SearchedFilms = () => {
   }, [title]);
 
 
-  const handleInput = (input) => {
-    setTitle(input.target.value);
-  };
 
 
   const handleFilmDetailsClick = (film) => {
@@ -63,13 +60,7 @@ const SearchedFilms = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const data = await response.json();
-      /*  if (data.Response === "False") {
-        console.log("Movie details not found");
-        setFullFilmData(false);
-      } else {
-        console.log(data);
-        setFullFilmData(data);
-      }*/
+     
       return data;
     } catch (error) {
       console.error("Error fetching film: ", error);
@@ -90,7 +81,7 @@ const SearchedFilms = () => {
 
       if (filmData.Response === "False") {
         console.log("Movie not found");
-        setMessage("Movie not found");
+        setMessage("Movie not found please try again!");
         setSearchClicked(false);
         setFilmData(null);
       } else {
@@ -109,12 +100,10 @@ const SearchedFilms = () => {
   return (
     <div>
       {!searchClicked ? (
-        <div className="initial-search">
+       
+       <div className="noSearch-content">
           <h2 className="noResult">{message}</h2>
-          <h1 className='searchField'>Search<span className='blue'>Here</span></h1>
-          <input className='input' type="text" value={title} onChange={handleInput} />
-          <button className='btn-search' onClick={getFilm}>Search</button>
-        </div>
+  </div>
       ) : null}
       {filmData ? (
         <div className="search-content">
@@ -142,74 +131,3 @@ const SearchedFilms = () => {
 
 
 export default SearchedFilms;
-
-{
-  /*
-      {filmData ?  (
-         <div className='search-content'>
-
-          
-
-          <h2>Search Results</h2>
-          <ul>
-            <div className="movies">
-
-              
-
-            {filmData.Search.map((film, index) => (
-              <li key={index}>
-                <div>
-                <div className='posterContainer'>
-                  <img className="poster" src={film.Poster} 
-                  onError={(e) => (e.currentTarget.src = fallback)} alt={film.Title} />
-                  </div>
-
-                    <div>
-                      <h3 className="filmTitle">{film.Title}</h3>
-                      <p className="type">Type: {film.Type}</p>
-                      <p className="year">Year: {film.Year}</p>
-                      <p className="imdb">IMDB ID: {film.imdbID}</p>
-                      <a className="link" href={`http://www.imdb.com/title/${film.imdbID}`}>
-                        IMDB Page
-                      </a>
-                    </div>
-
-                    <div>
-                      <button className="buyMovieBtn" onClick={() => handleBuy(film)}>Buy</button>
-                      <button className="more-info-btn" onClick={() => { setExpanded(!expanded); getFilmDetails(film.imdbID); setSelectedFilm(film)}}>{btnName}</button>
-                      { expanded && selectedFilm === film ? (
-                        <section className="expanded-info">
-                          <section className="data">
-                          {fullFilmData ? (
-                            <div>
-                              <h3>Runtime: {fullFilmData.Runtime}</h3>
-                              <h3>Director: {fullFilmData.Director}</h3>
-                              <p>Plot: {fullFilmData.Plot}</p>
-                            </div>
-                              
-                            ) : (
-                              <p>Loading film details...</p>
-                            )}
-
-                          </section>
-                        </section>
-
-                      ) : null}
-
-                    </div>
-                  </div>
-                  <p>
-                    
-                  </p>
-                </li>
-              ))}
-            </div>
-          </ul>
-        </div>
-      ) : null}
-    </div>
-  );
-};
-
-export default SearchedFilms; */
-}

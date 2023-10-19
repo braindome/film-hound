@@ -1,19 +1,17 @@
+
 .user_bar {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 2px;
-    margin-top: 20px;
-    padding-left: 0px;
     margin: 5px;
     padding-left: 1px;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .user_bar:hover {
 
     opacity: 1;
-
 }
 .login_btn {
     color: white;
