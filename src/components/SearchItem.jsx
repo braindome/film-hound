@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import fallback from "/src/assets/NoImage.png";
-import "./styles/SearchItem.css"
+import "./styles/SearchItem.css";
 
 const SearchItem = ({ film, handleBuy, getFilmDetails }) => {
   const [expanded, setExpanded] = useState(false);
@@ -32,57 +32,60 @@ const SearchItem = ({ film, handleBuy, getFilmDetails }) => {
   }, [expanded, film.imdbID, getFilmDetails]);
 
   return (
+    <div className={`search-item-container ${expanded ? "expanded" : ""}`}>
+      <div className="title-poster">
+        <h3 className="film-title">{film.Title}</h3>
+        <div className="year-type-row">
+          <p>Type: {film.Type}</p>
+          <p>Year: {film.Year}</p>
+        </div>
+      </div>
 
+      <div className="poster">
+        <img
+          src={film.Poster}
+          onError={(e) => (e.currentTarget.src = fallback)}
+          alt={film.Title}
+        />
+      </div>
 
-<div className={`search-item-container ${expanded ? 'expanded' : ''}`} >
+      <div className="buttons-row">
+        <button className="buyMovieBtn" onClick={() => handleBuy(film)}>
+          Buy
+        </button>
+        <button className="more-info-btn" onClick={toggleExpanded}>
+          {expanded ? "Less" : "More"}
+        </button>
+      </div>
 
-  <div className="title-poster" >
-    <h3 className="film-title">{film.Title}</h3>
-    <div className="year-type-row">
-      <p>Type: {film.Type}</p>
-      <p>Year: {film.Year}</p>
-    </div>
-  </div>
-
-  <div className="poster">
-    <img
-      src={film.Poster}
-      onError={(e) => (e.currentTarget.src = fallback)}
-      alt={film.Title}
-    />
-  </div>
-
-  <div className="buttons-row">
-    <button className="buyMovieBtn" onClick={() => handleBuy(film)}>Buy</button>
-    <button className="more-info-btn" onClick={toggleExpanded}>{expanded ? "Less" : "More"}</button>
-  </div>
-
-  <div className="expanded_info_wrapper">
-    {expanded && (
-      <section className="expanded-info">
-        <section className="data">
-          {fullFilmData ? (
-            <section>
-              <p className="plot">Plot: {fullFilmData.Plot}</p>
-              <div className="detailed-info-bottom-container" >
-                <p>Runtime: {fullFilmData.Runtime}</p>						
-                <p>Director: {fullFilmData.Director}</p>							
-                <p>Released: {fullFilmData.Released} </p>						
-                <p>IMDB Rating: {fullFilmData.imdbRating} </p>						
-                <p>Metascore: {fullFilmData.Metascore} </p>						
-                <a href={`http://www.imdb.com/title/${film.imdbID}`}><p>IMDB</p></a>
-              </div>
+      <div className="expanded_info_wrapper">
+        {expanded && (
+          <section className="expanded-info">
+            <section className="data">
+              {fullFilmData ? (
+                <section>
+                  <p className="plot">Plot: {fullFilmData.Plot}</p>
+                  <div className="detailed-info-bottom-container">
+                    <p>Runtime: {fullFilmData.Runtime}</p>
+                    <p>Director: {fullFilmData.Director}</p>
+                    <p>Genre: {fullFilmData.Genre} </p>
+                    <p>Language: {fullFilmData.Language} </p>
+                    <p>Starring: {fullFilmData.Actors} </p>
+                    <p>IMDB Rating: {fullFilmData.imdbRating} </p>
+                    <p>Metascore: {fullFilmData.Metascore} </p>
+                    <a href={`http://www.imdb.com/title/${film.imdbID}`}>
+                      <p>IMDB</p>
+                    </a>
+                  </div>
+                </section>
+              ) : (
+                <p>Loading film details...</p>
+              )}
             </section>
-          ) : (
-            <p>Loading film details...</p>
-          )}
-        </section>
-      </section>
-    )}
-
-  </div>
-
-</div>
+          </section>
+        )}
+      </div>
+    </div>
     // <div>
     //   <div className="posterContainer">
     //     <img
@@ -112,7 +115,7 @@ const SearchItem = ({ film, handleBuy, getFilmDetails }) => {
     //     //     getFilmDetails(film.imdbID);
     //     //     setSelectedFilm(film);
     //     //   }}
-        
+
     //     >
     //       {expanded ? "LESS" : "MORE"}
     //     </button>
