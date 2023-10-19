@@ -18,17 +18,20 @@ function Header() {
 </Link>*/ 
 function BackgroundSection() {
   return (
+    <div className="background-one-container">
     <div className="background-section">
       <div className="background-content">
         <h1>WELCOME TO FILM<span className="blue">HOUND</span></h1>
      
       </div>
     </div>
+    </div>
   );
 }
 
 function BoxesSection() {
   return (
+    <div className="boxescontainer">
     <div className="boxes-section">
     <h2 className="box"> PICK A <span className="blue">MOVIE</span> <br /> <br /> <img className="ikon1" src={iconOne} alt="Icon" />
 </h2>
@@ -36,7 +39,7 @@ function BoxesSection() {
     </h2>
     <h2 className="box"> WATCH & <span className="blue">ENJOY</span> <br /> <br /> <img className="ikon3" src={iconThree} alt="Icon" />
 </h2>
-  </div>
+  </div> </div>
   );
 }
 function BackgroundSectionTwo() {
@@ -53,7 +56,7 @@ function BackgroundSectionTwo() {
 
 function home() {
   return (
-    <div>
+    <div className="background-home">
       
       <BackgroundSection />
       <hr />
