@@ -5,7 +5,7 @@ import { addToCart } from "../features/action";
 import SearchItem from "./SearchItem.jsx";
 
 const API_KEY = "973b4444";
-const BASE_URL = "http://www.omdbapi.com/?apikey=";
+const BASE_URL = "https://www.omdbapi.com/?apikey=";
 const TITLE_SEARCH_PARAM = "&s=";
 
 const SearchedFilms = () => {
