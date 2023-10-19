@@ -2,12 +2,12 @@
     display: flex;
     color: white;
     flex-direction: column;
-    margin: 100px auto;
-    padding: 20px;
+    /* margin: 100px auto; */
+    padding: 10px;
     /* min-width: 50px; */
     text-align: center;
     /* margin-left: 400px; */
-    max-width: 400px;
+    max-width: 360px;
 
 }
 
@@ -19,5 +19,11 @@
 }
 .cart-title {
     color: white;
+}
+
+@media (max-width: 360px) {
+    .cart_wrapper .checkout_row {
+        width: 320px;
+    }
 }
 

@@ -39,7 +39,7 @@
     color: rgb(255, 255, 255);
     display: flex;
     width: fit-content;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     margin-left: 10px;
     
 }
@@ -76,9 +76,9 @@
    
 }
 
-.rightSide {
+/* .rightSide {
     border: solid 2px salmon;
-}
+} */
 
 .search-section {
     display: flex;
@@ -107,7 +107,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px salmon;
+    /* border: solid 1px salmon; */
 
 }
 
@@ -130,7 +130,9 @@
 
 @media (max-width: 374px) {
     .navbar {
-        height: 80px;
+        height: 60px;
+        display: flex;
+        align-items: center;
 
 
     }

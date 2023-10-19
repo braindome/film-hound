@@ -2,24 +2,31 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center; 
-    padding-top: 7rem;
+    padding-top: 6rem;
     padding-bottom: 3rem;
     color: white;
-    padding-left: 30px;
+    padding-left: 10px;
+    /* border: solid salmon 2px; */
 
     
 
   }
 
+  .list-wrapper {
+    /* border: solid 2px green; */
+    padding: 0;
+  }
 
 
-.movies {
+
+.movies- {
     display: grid;
     grid-template-columns: 1fr  1fr 1fr;
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 20px;
+    /* border: solid 2px yellow; */
 
 
 }
@@ -44,7 +51,7 @@
 }
 .input {
 padding-top: 0.1rem;
-border-radius: 2px solid;
+border-radius: 2px solid white;
 margin-left: 570px;
 
 }
@@ -91,34 +98,55 @@ ul{
 
 
 
-@media (max-width: 320px) {
-    .search-content{
-   grid-template-columns: 1fr;
+@media (max-width: 360px) {
+
+    .search-content {
+        margin-left: 50px;
+    }
+
+
+
+    .movies- {
+        grid-template-columns: 1fr;
+        margin-right: 0; /* Remove margin-right */
+        margin-left: 0; /* Remove margin-left */
+        max-width: 100%; /* Allow it to take full width */
   
     
- }
+    }
  
 
 }
 
 @media (max-width: 768px) {
-  .search-content {
 
-    grid-template-columns: 1fr  ;
-    margin-right: 500px;
-    margin-left: 160px;
-    max-width: 80px;
-  }
+
+    .movies- {
+        grid-template-columns: 1fr 1fr;
+        margin-right: 0; 
+        margin-left: 0; 
+        max-width: 100%; 
+    }
   
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
 
- .movies {
-    grid-template-columns: 1fr  ;
-    margin-right: 400px;
-    margin-left: 30px;
-    max-width: 70px;
- }
+    .movies- .list-wrapper {
+        grid-template-columns: 1fr 1fr 1fr  ;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 75%; 
+    }
 }
+
+@media (min-width: 1450px) {
+    .movies- {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 100%; 
+    }
+}
+
 

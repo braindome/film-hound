@@ -4,11 +4,9 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    margin: 10px;
     position: relative;
-    margin-left: 10px;
     color: white;
-    width: 400px;
+    width: 420px;
     border-radius: 15px;
 }
 
@@ -18,6 +16,7 @@
 
 .cart_item button {
     height: 50px;
+    width: 50px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -30,4 +29,14 @@
 }
 button:hover {
 background-color: rgb(255, 0, 0);
+}
+
+@media (max-width: 370px) {
+    .cart_item {
+        width: 320px;
+        /* margin: 2px; */
+
+
+    }
+
 }

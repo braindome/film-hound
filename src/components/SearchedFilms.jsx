@@ -37,9 +37,6 @@ const SearchedFilms = () => {
     }
   }, [title]);
 
-
-
-
   const handleFilmDetailsClick = (film) => {
     console.log("Clicking on preview", film);
     setSelectedFilm(film);
@@ -60,7 +57,7 @@ const SearchedFilms = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const data = await response.json();
-     
+
       return data;
     } catch (error) {
       console.error("Error fetching film: ", error);
@@ -94,23 +91,19 @@ const SearchedFilms = () => {
     }
   };
 
-
-
-
   return (
     <div>
       {!searchClicked ? (
-       
-       <div className="noSearch-content">
+        <div className="noSearch-content">
           <h2 className="noResult">{message}</h2>
-  </div>
+        </div>
       ) : null}
       {filmData ? (
         <div className="search-content">
           <h2>Search Results</h2>
 
-          <ul>
-            <div className="movies">
+          <ul className="list-wrapper">
+            <div className="movies-">
               {filmData.Search.map((film, index) => (
                 <li key={index}>
                   <SearchItem
@@ -128,6 +121,5 @@ const SearchedFilms = () => {
     </div>
   );
 };
-
 
 export default SearchedFilms;

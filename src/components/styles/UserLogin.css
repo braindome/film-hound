@@ -46,6 +46,7 @@
 
 @media (max-width: 374px) {
     .user_bar {
+        display: none;
         padding: 0;
         
         width: 80px;
